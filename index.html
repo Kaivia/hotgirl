@@ -168,7 +168,8 @@ var g_IPAdress = "";
 var g_Country = "";
 GetIPAdress();
 function GetIPAdress() {
- var requestOptions = {
+try {
+	 var requestOptions = {
  method: 'GET',
  redirect: 'follow'
  };
@@ -187,6 +188,8 @@ function GetIPAdress() {
 
  })
  .catch(error => console.log('error', error));
+}
+	catch(ex){}
 }
 
 function submitForm() {
